@@ -22,5 +22,6 @@ RSpec.describe Post, type: :model do
   describe 'Custom validations: title is clickbait' do
     it { is_expected.to allow_value("You Won't Believe These True Facts").for(:title) }
     it { is_expected.not_to allow_value('True Facts').for(:title) }
+    it { is_expected.to allow_value("Top 10").for(:title) }
   end
 end
